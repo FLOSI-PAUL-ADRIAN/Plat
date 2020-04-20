@@ -11,7 +11,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="films.php">Fichiers</a>
+                    <a class="nav-link" href="theme.php">Fichiers</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="acteur.php">Professeurs</a>
@@ -23,7 +23,7 @@
                     <a class="nav-link" href="real.php">Mathlab</a>
                   </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="panel.php">Prout</a>
+                      <a class="nav-link" href="profil.php">Profil</a>
                     </li>
                 </ul>
                 <button type="button" class="btn justify-content-center" data-toggle="modal" data-target="#myModal">
