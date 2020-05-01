@@ -19,6 +19,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+    h1 {
+        font-family: 'fantasy';
+    }
+    body {
+        background-color: black;
+        background-size: cover;
+    }
+
+
+</style>
 
 <body>
 <navh class="navbar navbar-dark bg-dark">
@@ -36,7 +47,93 @@
 <button class="btn btn-outline-light btn-sm my-0 "><a href="login.php">Connexion</button>
 </navh>
 
-    
+    <!--/.Navbar-->
+<h2 class="text-info "> Matières</h2>
+
+<!--Carousel Wrapper-->
+<div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i
+        class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+
+
+  <!--Slides and lightbox-->
+
+  <div class="carousel-inner lightbox" role="listbox">
+    <div id="mdb-lightbox-ui"></div>
+    <!--First slide-->
+    <div class=" carousel-item active text-center">
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item text-center">
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+
+
+    </div>
+    <!--/.Second slide-->
+
+    <!--Third slide-->
+    <div class="carousel-item text-center">
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+
+    </div>
+    <!--/.Third slide-->
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+<h3 class="text-info ">Thèmes</h3>
+<img src="science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 
 </body>
 </html>
