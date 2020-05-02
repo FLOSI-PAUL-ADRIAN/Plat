@@ -19,22 +19,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+<?php
+          include("navbar.php");
+        ?>
+        
+<body style="background-color:rgba(255,133,79,80);">
 
-<body>
-<navh class="navbar navbar-dark bg-dark">
-
-<h1 class="text-success bg-dark"><a href="accueil.php">Home</h1>
-
-
-<div class="container">
-
-    <input class="form-control mr-0" type="search" placeholder="Nom du thème ou de la matière recherchée" aria-label="Search">
-    <button class="btn btn-outline-info btn-sm my-0 ">Chercher</button>
-
-</div>
-<button class="btn btn-outline-danger btn-sm my-0 "><a href="Inscription.php">Inscription</button>
-<button class="btn btn-outline-light btn-sm my-0 "><a href="login.php">Connexion</button>
-</navh>
 
     
 
