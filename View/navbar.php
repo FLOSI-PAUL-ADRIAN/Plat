@@ -1,110 +1,31 @@
 <!DOCTYPE html>
-<html>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light" id="navbarre">
-              <a class="navbar-brand main" href="accueil.php">Plat</a>
+<html lang="en">
+<header>
+    <navh class="navbar navbar-dark bg-dark">
 
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="theme.php">Fichiers</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="acteur.php">Professeurs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="genre.php">Touscom</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="real.php">Mathlab</a>
-                  </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="profil.php">Profil</a>
-                    </li>
-                </ul>
-                <button type="button" class="btn justify-content-center" data-toggle="modal" data-target="#myModal">
-                      Se connecter
-                </button>
-              </div>
-            </nav>
-
-            <div class="modal fade" id="myModal">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">        
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Connexion</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>        
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                      <form action="#" > <!-- Apellle le meme fichier -->
-                        <script type= "text/javascript" src="/script.js"></script>
-                          <div class="col-12 border6">
-                              <label for="login">Nom d'utilisateur</label>
-                              <input type="text" name="login" required="true">
-                  
-                              <label for="password">Mot de passe</label>
-                              <input type="password" name="password" required="true">
-                  
-                              <input type="submit" name="Valider" />        
-                          </div>
-                      </form> 
-                  </div>
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn justify-content-center" data-toggle="modal" data-target="#inscription">S'inscrire</button> 
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+<h1 class="text-success bg-dark"><a href="accueil.php">Home</h1>
 
 
-            <div class="modal fade" id="inscription">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Inscription</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  
-                  <!-- Modal body -->
-                  <div class="modal-body">
+<div class="container">
 
-                      <form method="post" action=adduser.php >
-                        <script type= "text/javascript" src="/script.js"></script>
-                          <div class="col-12 border6">
+    <input class="form-control mr-0" type="search" placeholder="Nom du thème ou de la matière recherchée" aria-label="Search">
+    <button class="btn btn-outline-info btn-sm my-0 ">Chercher</button>
 
-                               <label for="username">Nom d'utilisateur</label>
-                              <input type="text" name="username" id="username" required="true">
-                              <label for="email">Adresse mail</label>
-                              <input type="text" name="email" id="email" required="true">
-                  
-                              <label for="password">Mot de passe</label>
-                              <input type="password" name="password" id="password" required="true">
-                  
-                              <input type="submit" name="Valider" id="valider"
+</div>
+<!--<button class="btn btn-outline-danger btn-sm my-0 "><a href="Inscription.php">Inscription</button>-->
 
+<button class="btn btn-outline-light btn-sm my-0 "><a href="login.php">Se connecter</button>
 
+<?php
+            session_start();
+            if(!isset($_SESSION['name']))
+                echo '<a class="btn bg-lightred" href="login.php">Se connecter</a>';
+            ?>
 
+</navh>
+<ul>
+<?php
+    include("connexion.php"); 
+?>
 
-                          </div>
-                      </form> 
-                  </div>
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-        </header>
-</html>
+</header> 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+
 
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -15,10 +15,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/0ed05156d4.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <style>
     h1 {
         font-family: 'fantasy';
@@ -30,22 +30,9 @@
 
 
 </style>
-
 <body>
-<navh class="navbar navbar-dark bg-dark">
-
-<h1 class="text-success bg-dark"><a href="accueil.php">Home</h1>
 
 
-<div class="container">
-
-    <input class="form-control mr-0" type="search" placeholder="Nom du thème ou de la matière recherchée" aria-label="Search">
-    <button class="btn btn-outline-info btn-sm my-0 ">Chercher</button>
-
-</div>
-<button class="btn btn-outline-danger btn-sm my-0 "><a href="Inscription.php">Inscription</button>
-<button class="btn btn-outline-light btn-sm my-0 "><a href="login.php">Connexion</button>
-</navh>
 
     <!--/.Navbar-->
 <h2 class="text-info "> Matières</h2>
