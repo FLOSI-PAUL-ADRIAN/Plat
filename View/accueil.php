@@ -63,7 +63,7 @@
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="./img/math.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/maths.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
@@ -78,7 +78,7 @@
     <div class="carousel-item text-center">
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="./img/math.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/maths.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
@@ -86,7 +86,7 @@
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/maths.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
 
