@@ -59,15 +59,15 @@
     <div class=" carousel-item active text-center">
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/math.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/math.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
 
@@ -78,15 +78,15 @@
     <div class="carousel-item text-center">
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/math.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
 
@@ -98,15 +98,15 @@
     <div class="carousel-item text-center">
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
       <figure class="col-md-0 d-md-inline-block">
-        <img src="../img/physique.jpg" class="img-fluid" width ="500" height="300">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
       </figure>
 
 
@@ -119,8 +119,8 @@
 </div>
 <!--/.Carousel Wrapper-->
 <h3 class="text-info ">Thèmes</h3>
-<img src="../img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
-<img src="../img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="./img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="./img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 
 </body>
 </html>
