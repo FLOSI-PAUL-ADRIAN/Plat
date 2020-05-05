@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
     <?php
           include("navbar.php");
         ?>
@@ -118,7 +119,7 @@
 
 </div>
 <!--/.Carousel Wrapper-->
-<h2 class="text-info ">Thèmes</h2>
+<h2 class="text-info "><a href="theme.php">Thèmes</h2>
 <img src="./img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 <img src="./img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 
