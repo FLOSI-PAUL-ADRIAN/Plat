@@ -1,47 +1,30 @@
-<?php
-
-    //on créer une nouvelle calsse permettant de ce connecter a la base de donné 
-    class connexionBDD{
-        private $host ='localhost';
-        private $name ='projetWeb';
-        private $user ='root';
-        private $mdr ='root';
-        private $connexion;
-    
-        function construct($host = null, $name = null, $user = null,  $mdp = null){
-            if($host !=null){
-                $this->host =$host;
-                $this->name =$name; 
-                $this->user =$user;
-                $this->mdp =$mdp;
-            }
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cours PHP / MySQL</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="cours.css">
+    </head>
+    <body>
+        <h1>Bases de données MySQL</h1>  
+        <?php
+            $servername = 'localhost';
+            $username = 'root';
+            $password = 'root';
+            
+            //On essaie de se connecter
             try{
-                $this->connexion = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->name,
-                $this->user, $this->mdp, array(PDO::MYSQL_ATTR_INIT_COMMAND =>'SET NAMES UTF8',
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+                $conn = new PDO("mysql:host=$servername;dbname=bddtest", $username, $password);
+                //On définit le mode d'erreur de PDO sur Exception
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                echo 'Connexion réussie';
             }
-            catch (PDOException $e){
-                echo 'Erreur : Impossible de se connecter à la BDD'
-                die();
+            
+            /*On capture les exceptions si une exception est lancée et on affiche
+             *les informations relatives à celle-ci*/
+            catch(PDOException $e){
+              echo "Erreur : " . $e->getMessage();
             }
-
-        }
-    
-    
-    //Cette fonction permet de gagner du temps lorsque l'on intérroge la base de donnée
-
-    public function query($sql, $data = array()){
-        $req = $this->connexion->prepare($sql);
-        $req->execute($data);
-        return $req;
-    }
-
-    //Cette fonction permet d'ajouter des éléments au sein de la base de donnée 
-    public function insert($sql, $data =array()){
-        $req =$this->connexion->prepare($sql);
-        $req->execute($data);
-    }
-}
-
-$DB =new connexionBDD();
-?>
+        ?>
+    </body>
+</html>
