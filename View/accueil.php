@@ -35,7 +35,7 @@
 </style>
 <body>
 
-<h2 class="text-info "><a href="matiere.php"> Matières</h2>
+<h1 class="text-info "><a href="matiere.php"> Matières</h1>
 
 <!--Carousel Wrapper-->
 <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
