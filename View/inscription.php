@@ -57,3 +57,12 @@
     </div>
 </body>
 </html>
+
+<?php
+    session_start();
+    include("View/connexionBDD.php"); 
+
+    if (isset($_SESSION['id'])){
+        header('Location: View/acceuil.php');
+        exit;
+    }
