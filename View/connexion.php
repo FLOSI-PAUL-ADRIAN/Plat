@@ -76,7 +76,7 @@ input[type=submit]:hover {
             <!-- zone de connexion -->
             
             <form action="verification.php" method="POST">
-                <h1>Connectez Vous !!!</h1>
+                <h1><a href="connexion.php">Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
