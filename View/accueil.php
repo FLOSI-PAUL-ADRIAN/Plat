@@ -35,10 +35,7 @@
 </style>
 <body>
 
-
-
-    <!--/.Navbar-->
-<h2 class="text-info "> Matières</h2>
+<h2 class="text-info "><a href="matiere.php"> Matières</h2>
 
 <!--Carousel Wrapper-->
 <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -121,7 +118,7 @@
 
 </div>
 <!--/.Carousel Wrapper-->
-<h3 class="text-info ">Thèmes</h3>
+<h2 class="text-info ">Thèmes</h2>
 <img src="./img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 <img src="./img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 
