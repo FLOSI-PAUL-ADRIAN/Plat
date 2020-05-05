@@ -34,7 +34,7 @@
                 <input type="text" class="form-control" name="nom">
             </div>
             <div class="form-group">
-                <label for="Prenom">Prénom</label>
+                <label for="prenom">Prénom</label>
                 <input type="text" class="form-control" name="prenom">
             </div>
             <div class="form-group">
@@ -59,10 +59,21 @@
 </html>
 
 <?php
-    session_start();
-    include("View/connexionBDD.php"); 
 
-    if (isset($_SESSION['id'])){
-        header('Location: View/acceuil.php');
-        exit;
-    }
+//connexion a la bdd
+  try{
+      $bdd =new PDO ('mysql:host=localhost;dbname=TriScool', 'root', 'root');
+  }
+
+  catch(Exception $e){
+      die('Erreur :'.$e->get%Essage());
+  }
+
+  if(ISSET($_POST['submit'])){
+
+    $mail = $_POST['mail'];
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $mdp = $_POST['pass'];
+    
+  }
