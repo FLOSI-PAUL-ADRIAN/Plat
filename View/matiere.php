@@ -60,7 +60,19 @@ function myFunction() {
   <li><a href="#">Langues</a></li>
 </ul>
         </div>
-        
+
+        <input type="file" />
+
+
+        <br>
+        <br>
+        <br>
+
+        <form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+
 
 </body>
 </html>
