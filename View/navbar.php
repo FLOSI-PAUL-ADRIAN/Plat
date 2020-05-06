@@ -14,14 +14,16 @@
     
         <?php
         session_start();
-        if(isset($_SESSION["role"]) == false){
+        $_SESSION["role"] = "no one";
+        if(isset($_SESSION["role"]) == "no one"){
             $_SESSION["role"] ="visiteur";
             ?>
             <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="connexion.php">Connecter vous !!!!</a></button>
 
             <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivé vous !!!</a></button>
+        <?php
         }
-        if(isset($_SESSION["role"]) != false){
+        else{
             ?>
             <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Profil</a></button>
             <?php
