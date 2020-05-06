@@ -12,11 +12,21 @@
     <button class="btn btn-outline-info btn-sm my-0  ">Chercher</button>
     </div>
     
-    <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="connexion.php">Connectez vous !!!</a></button>
-    
-  
-    <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscription</a></button>
-    
+        <?php
+        session_start();
+        if(isset($_SESSION["role"]) == false){
+            $_SESSION["role"] ="visiteur";
+            ?>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="connexion.php">Connecter vous !!!!</a></button>
+
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivé vous !!!</a></button>
+        }
+        if(isset($_SESSION["role"]) != false){
+            ?>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Profil</a></button>
+            <?php
+        }
+        ?>
 
 </navh>
 
