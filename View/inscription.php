@@ -21,72 +21,8 @@
         ?>
 </head>
 <body style="background-color:rgba(255,133,79,80);">
-    <div class="text-center rounded" style="margin-left:30%;margin-right:30%;margin-top:5%;margin-bottom:5%;padding:40px;background-color:rgba(255,255,255,1);">
-    <h1>S'inscrire</h1>
-    <br>
-        <form>
-            <div class="form-group">
-                <label for="mail">Email</label>
-                <input type="email" class="form-control" name="mail">
-            </div>
-            <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" class="form-control" name="nom">
-            </div>
-            <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" class="form-control" name="prenom">
-            </div>
-            <div class="form-group">
-                <label for="pass">Mot de passe</label>
-                <input type="password" class="form-control" name="pass">
-            </div>
-            <div class="form-group">
-                <label for="pass">Verification du mot de passe</label>
-                <input type="password" class="form-control" name="pass">
-            </div>
-            <br>
-            <a href="login.php" class="btn btn-outline-secondary">Se connecter</a>
-            <button type="submit" class="btn btn-danger">S'inscrire</button>
-        </form>
-    </div>
-</body>
 
-
-<?php
-
-
-//connexion a la bdd
-  try{
-      $bdd =new PDO ('mysql:host=localhost;dbname=TriScool', 'root', 'root');
-  }
-
-  catch(Exception $e){
-      die('Erreur :'.$e->get%Essage());
-  }
-
-  if(ISSET($_POST['submit'])){
-
-    $mail = $_POST['mail'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $mdp = $_POST['pass'];
-    
-    $req =$bdd->prepare('INSERT INTO users(prenom, nom, email, mdp)
-                        VALUES (:prenom, :nom, :email, :mdp)');
-    
-    $req->execute(array("prenom" => $prenom, "nom" =>$nom, "email" =>$email, "mdp" =>$mdp));
-
-    if(!empty($prenom) && !empty($nom) && !empty($email) && !empty($mdp)){
-        session_start();
-        header('Location: index.php');
-
-    }
-    else{
-    ?>
-        <b>Veuillez remplir tous les champs</b>
     <?php
-    }
-  }
-  ?>
-  </html>
+          include("inscrire.php");
+        ?>
+</html>
