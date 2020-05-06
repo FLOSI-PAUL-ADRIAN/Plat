@@ -38,11 +38,6 @@
                 <input type="text" class="form-control" name="prenom">
             </div>
             <div class="form-group">
-                <label for="date">Date de naissance</label>
-                <input type="text" class="form-control" name="date">
-                <small class="form-text text-muted">JJ/MM/AAAA</small>
-            </div>
-            <div class="form-group">
                 <label for="pass">Mot de passe</label>
                 <input type="password" class="form-control" name="pass">
             </div>
@@ -56,9 +51,10 @@
         </form>
     </div>
 </body>
-</html>
+
 
 <?php
+
 
 //connexion a la bdd
   try{
@@ -76,4 +72,21 @@
     $prenom = $_POST['prenom'];
     $mdp = $_POST['pass'];
     
+    $req =$bdd->prepare('INSERT INTO users(prenom, nom, email, mdp)
+                        VALUES (:prenom, :nom, :email, :mdp)');
+    
+    $req->execute(array("prenom" => $prenom, "nom" =>$nom, "email" =>$email, "mdp" =>$mdp));
+
+    if(!empty($prenom) && !empty($nom) && !empty($email) && !empty($mdp)){
+        session_start();
+        header('Location: index.php');
+
+    }
+    else{
+    ?>
+        <b>Veuillez remplir tous les champs</b>
+    <?php
+    }
   }
+  ?>
+  </html>
