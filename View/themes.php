@@ -57,6 +57,7 @@ function myFunction() {
     <li><a href="./themes/Langues/langues.php">Langues</a></li>
     <li><a href="./themes/Litterature/litte.php">Littérature</a></li>
 <li><a href="./themes/Sciences/sciences.php">Sciences</a></li>
+<li><a href="matiere.php">Test </a></li>
 
 
 </ul>
