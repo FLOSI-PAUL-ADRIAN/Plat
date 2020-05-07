@@ -18,6 +18,7 @@
         //if(isset($_GET["role"] == false){
       //      $_SESSION['role'] ="visiteur";
             
+<<<<<<< HEAD
         //}
         //if(isset($_GET["choix"]){
           //  if($_GET["choix"] == "administrateur"){
@@ -27,6 +28,17 @@
             //    $_SESSION["role"] = "user";
            // }
        // }
+=======
+        }
+        if(isset($_GET["choix"]) { 
+            if($_GET["choix"] == "administrateur"){
+                $_SESSION["role"] = "administrateur";
+            }
+            if($_GET["choix"] == "user"){
+                $_SESSION["role"] = "user";
+            }
+        }
+>>>>>>> 078ba9d6d25fad068dbb43b49474a274828a4ad1
            
         
         ?> 
