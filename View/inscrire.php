@@ -15,7 +15,7 @@ if(!$mysqli) {
     exit;
 }
     //création automatique de la table membres, une fois créée, vous pouvez supprimer les lignes de code suivantes:
-    
+    //echo mysqli_query($mysqli,"CREATE TABLE IF NOT EXISTS `".$BDD['db']."`.`membres` ( `id` INT NOT NULL AUTO_INCREMENT , `pseudo` VARCHAR(25) NOT NULL , `mdp` CHAR(32) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;")?"Table membres créée avec succès, vous pouvez maintenant supprimer la ligne ". __LINE__ ." de votre fichier ". __FILE__ ."!":"Erreur création table membres: ".mysqli_error($mysqli);
     //la table est créée avec les paramètres suivants:
     //champ "id": en auto increment pour un id unique, peux vous servir pour une identification future
     //champ "Email": en varchar de 0 à 25 caractères
