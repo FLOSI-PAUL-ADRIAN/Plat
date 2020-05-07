@@ -130,14 +130,6 @@ function myFunction() {
 
   </div>
   <!--/.Slides-->
-
-<a href="matiere.php"><h2 class="text-info ">Thèmes</h2></a>
-<img src="./img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
-<img src="./img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
-<img src="./img/langues.jfif" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
-<img src="./img/informatique.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
-<img src="./img/Histoirgeo.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
-
         
 
 </body>
