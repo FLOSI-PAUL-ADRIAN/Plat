@@ -73,6 +73,47 @@ function myFunction() {
   <input type="submit">
 </form>
 
+<br><br><br><br>
+
+        <br><br><br>
+
+
+        <?php
+    session_start(); // toujours pour commencer 
+    if (isset($_SESSION["role"]) == false) { // vérification de si une session role est active 
+        $_SESSION["role"] = "visiteur";
+    }
+    if (isset($_GET["choix"])) {  // si mon choix (fait dans le form) alors mon role  
+        if ($_GET["choix"] == "administrateur") {
+            $_SESSION["role"] = "administrateur";
+        }
+        if ($_GET["choix"] == "utilisateur") {
+            $_SESSION["role"] = "utilisateur";
+        }
+        if ($_GET["choix"] == "visiteur") {
+            $_SESSION["role"] = "visiteur";
+        }
+    }
+    ?>
+    <br>
+
+    <form action="matiere.php" method="get">
+        <input type="submit" value="administrateur" name="choix">  <!-- la valeur correspond au role est le name renseigne la varible -->
+    </form>
+    <form action="matiere.php" method="get">
+        <input type="submit" value="utilisateur" name="choix">
+    </form>
+    <form action="matiere.php" method="get">
+        <input type="submit" value="visiteur" name="choix">
+    </form>
+    <br>
+    <?php 
+    echo "Votre role actuel est " . $_SESSION["role"] . ".";
+    ?>
+
+
+
+
 
 </body>
 </html>
