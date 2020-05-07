@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Login</title>
+    <title>Inscritpion</title>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -16,17 +16,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <?php
+<?php
           include("navbar.php");
         ?>
 </head>
 <body style="background-color:rgba(255,133,79,80);">
 
 <div class="text-center rounded" style="margin-left:30%;margin-right:30%;margin-top:5%;margin-bottom:5%;padding:40px;background-color:rgba(255,255,255,1);">
-    <h1>S'inscrire</h1>
-<?php
-    
 
+<h1>S'inscrire</h1>
+<?php
+  
 //connexion à la base de données:
 $BDD = array();
 $BDD['host'] = "localhost";
@@ -42,36 +42,28 @@ if(!$mysqli) {
     //echo mysqli_query($mysqli,"CREATE TABLE IF NOT EXISTS `".$BDD['db']."`.`membres` ( `id` INT NOT NULL AUTO_INCREMENT , `pseudo` VARCHAR(25) NOT NULL , `mdp` CHAR(32) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;")?"Table membres créée avec succès, vous pouvez maintenant supprimer la ligne ". __LINE__ ." de votre fichier ". __FILE__ ."!":"Erreur création table membres: ".mysqli_error($mysqli);
     //la table est créée avec les paramètres suivants:
     //champ "id": en auto increment pour un id unique, peux vous servir pour une identification future
-    //champ "Email": en varchar de 0 à 25 caractères
+    //champ "pseudo": en varchar de 0 à 25 caractères
     //champ "mdp": en char fixe de 32 caractères, soit la longueur de la fonction md5()
     //fin création automatique
 //par défaut, on affiche le formulaire (quand il validera le formulaire sans erreur avec l'inscription validée, on l'affichera plus)
 $AfficherFormulaire=1;
 //traitement du formulaire:
-if(isset($_POST['Email'],$_POST['Nom'],$_POST['Prenom'],$_POST['Mot de passe'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
-    if(empty($_POST['Email'])){//le champ Email est vide, on arrête l'exécution du script et on affiche un message d'erreur
-        echo "Le champ Email est vide.";
-    } elseif(strlen($_POST['Email'])>40){//le Email est trop long, il dépasse 40 caractères
-        echo "Le Email est trop long, il dépasse 40 caractères.";
-    } elseif(strlen($_POST['Nom'])>32){//le Nom est trop long, il dépasse 32 caractères
-        echo "Le Nom est trop long, il dépasse 32 caractères.";
-    } elseif(strlen($_POST['Prenom'])>32){//le Prenom est trop long, il dépasse 32 caractères
-        echo "Le Prenom est trop long, il dépasse 40 caractères.";
-    } elseif(strlen($_POST['Mot de passe'])>32){//le Mot de passe est trop long, il dépasse 32 caractères
-        echo "Le Mot de Passe est trop long, il dépasse 40 caractères.";
-    } elseif(!preg_match("#^[a-z]+$#",$_POST['Nom'])){//le champ Nom est renseigné mais ne convient pas au format qu'on souhaite qu'il soit, soit: que des lettres minuscule + des chiffres 
-        echo "Le Nom doit être renseigné en lettres minuscules sans accents, sans caractères spéciaux.";
-    } elseif(!preg_match("#^[a-z]+$#",$_POST['Prenom'])){//le champ Prenom est renseigné mais ne convient pas au format qu'on souhaite qu'il soit, soit: que des lettres minuscule + des chiffres 
-        echo "Le Prenom doit être renseigné en lettres minuscules sans accents, sans caractères spéciaux.";
-    } elseif(empty($_POST['Mot de passe'])){//le champ mot de passe est vide
+if(isset($_POST['pseudo'],$_POST['mdp'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
+    if(empty($_POST['pseudo'])){//le champ pseudo est vide, on arrête l'exécution du script et on affiche un message d'erreur
+        echo "Le champ Pseudo est vide.";
+    } elseif(!preg_match("#^[a-z0-9]+$#",$_POST['pseudo'])){//le champ pseudo est renseigné mais ne convient pas au format qu'on souhaite qu'il soit, soit: que des lettres minuscule + des chiffres (je préfère personnellement enregistrer le pseudo de mes membres en minuscule afin de ne pas avoir deux pseudo identique mais différents comme par exemple: Admin et admin)
+        echo "Le Pseudo doit être renseigné en lettres minuscules sans accents, sans caractères spéciaux.";
+    } elseif(strlen($_POST['pseudo'])>25){//le pseudo est trop long, il dépasse 25 caractères
+        echo "Le pseudo est trop long, il dépasse 25 caractères.";
+    } elseif(empty($_POST['mdp'])){//le champ mot de passe est vide
         echo "Le champ Mot de passe est vide.";
-    } elseif(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM membres WHERE Email='".$_POST['Email']."'"))==1){//on vérifie que cet Email n'est pas déjà utilisé par un autre membre
-        echo "Ce Email est déjà utilisé.";
+    } elseif(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM membres WHERE pseudo='".$_POST['pseudo']."'"))==1){//on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
+        echo "Ce pseudo est déjà utilisé.";
     } else {
         //toutes les vérifications sont faites, on passe à l'enregistrement dans la base de données:
-        
-        if(!mysqli_query($mysqli,"INSERT INTO membres SET Email='".$_POST['Email']."', Nom='".$_POST['Nom']."', Prenom='".$_POST['Prenom']."', Mot de passe='".md5($_POST['Mot de passe'])."'")){//on crypte le mot de passe avec la fonction propre à PHP: md5()
-            echo "Une erreur s'est produite: ".mysqli_error($mysqli);
+        //Bien évidement il s'agit là d'un script simplifié au maximum, libre à vous de rajouter des conditions avant l'enregistrement comme la longueur minimum du mot de passe par exemple
+        if(!mysqli_query($mysqli,"INSERT INTO membres SET pseudo='".$_POST['pseudo']."', mdp='".md5($_POST['mdp'])."'")){//on crypte le mot de passe avec la fonction propre à PHP: md5()
+            echo "Une erreur s'est produite: ".mysqli_error($mysqli);//je conseille de ne pas afficher les erreurs aux visiteurs mais de l'enregistrer dans un fichier log
         } else {
             echo "Vous êtes inscrit avec succès!";
             //on affiche plus le formulaire
@@ -79,7 +71,6 @@ if(isset($_POST['Email'],$_POST['Nom'],$_POST['Prenom'],$_POST['Mot de passe']))
         }
     }
 }
-
 if($AfficherFormulaire==1){
     ?>
     <!-- 
@@ -95,17 +86,12 @@ if($AfficherFormulaire==1){
      -->
     <br />
     <form method="post" action="inscription.php">
-        Email : <input type="email" name="Email">
+        Nom d'utilisateur : <input type="text" name="pseudo">
         <br />
-        Nom : <input type="text" name="Nom">
-        <br />
-        Prenom : <input type="text" name="Prenom">
-        <br />
-        Mot de passe : <input type="password" name="Mot de passe">
+        Mot de passe : <input type="password" name="mdp">
         <br />
         <input type="submit" value="S'inscrire">
-        <a href="login.php" class="btn btn-outline-secondary">Se connecter</a>
-        </form>
+    </form>
     <?php
 }
 ?>
