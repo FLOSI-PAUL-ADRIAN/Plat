@@ -16,15 +16,6 @@
 
        
         if(isset($_SESSION["role"])){
-            if($_SESSION["role"] == false){
-            ?>
-            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="login.php">Connectez vous !!!!</a></button>
-
-            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivez vous !!!</a></button>
-            <?php    
-            }           
-       
-     
             if($_SESSION["role"] == "administrateur"){
                 ?>
                 <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="profil.php">Profil</a></button>
