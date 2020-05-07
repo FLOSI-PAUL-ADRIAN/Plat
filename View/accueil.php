@@ -17,13 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-    <?php
-          include("navbar.php");
-        ?>
-</head>
-
-<style>
+    <style>
     h1 {
         font-family: 'fantasy';
     }
@@ -34,6 +28,13 @@
 
 
 </style>
+
+    <?php
+          include("navbar.php");
+        ?>
+</head>
+
+
 <body>
 
 <h1 class="text-info "><a href="matiere.php"></a>Matières</h1>
