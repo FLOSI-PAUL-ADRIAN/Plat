@@ -27,7 +27,7 @@
           include("verif.php");
         ?>
     <br>
-    <form action="connexion.php" method="post">
+    <form action="login.php" method="post">
     Email: <input type="email" name="pseudo" value="" />
     <br />
     Mot de passe: <input type="password" name="mdp" value="" />
