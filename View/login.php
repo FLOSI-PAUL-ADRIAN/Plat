@@ -42,7 +42,13 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
             $Pseudo = htmlentities($_POST['pseudo'], ENT_QUOTES, "ISO-8859-1"); // le htmlentities() passera les guillemets en entités HTML, ce qui empêchera les injections SQL
             $MotDePasse = htmlentities($_POST['mdp'], ENT_QUOTES, "ISO-8859-1");
             //on se connecte à la base de données:
-            $mysqli = mysqli_connect("localhost", "root", "root", "trischool");
+            $BDD = array();
+            $BDD['host'] = "localhost";
+            $BDD['user'] = "root";
+            $BDD['pass'] = "root";
+            $BDD['db'] = "trischool";
+            $mysqli = mysqli_connect($BDD['host'], $BDD['user'], $BDD['pass'], $BDD['db']);
+
             //on vérifie que la connexion s'effectue correctement:
             if(!$mysqli){
                 echo "Erreur de connexion à la base de données.";
