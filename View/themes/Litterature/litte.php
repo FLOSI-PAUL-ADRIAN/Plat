@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Administrateur</title>
 </head>
+
+<header>
+<?php
+          include("navbar.php");
+        ?>
+</header>
+
 <body style="background-color:rgba(255,133,79,80);">
 
     <br>
@@ -18,7 +25,10 @@
             {
                 echo "Félicitation vous êtes sur la page administrateur.";
                 echo "Vous pouvez repartir vers la page d'acceuil si vous le désirez";
-                ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
+                ?> <br>        <form action="">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+              </form><?php
             }
             else
             {
@@ -26,7 +36,12 @@
             {
                 echo "Félicitation vous êtes sur la page utilisateur.";
                 echo "Vous pouvez repartir vers la page d'acceuil si vous le désirez";
-                ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
+                ?>         <form action="h-g.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+              </form>
+              <?php
+                
             }
             else // sinon message d'erreur 
             {
