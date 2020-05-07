@@ -50,7 +50,7 @@ function myFunction() {
 <?php
           include("navbar.php");
         ?>
-<h1 class="text-info "><a href="matiere.php"></a>Matières</h1>
+<a href="matiere.php"><h1 class="text-info ">Matières</h1></a>
 
 <!--Carousel Wrapper-->
 <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
