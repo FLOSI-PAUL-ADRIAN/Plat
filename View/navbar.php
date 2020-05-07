@@ -13,7 +13,7 @@
     </div>
     
         <?php
-        session_start();
+        //session_start();
         if(isset($_SESSION["role"]) == false){
             $_SESSION["role"] ="visiteur";
             ?>

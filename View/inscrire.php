@@ -2,7 +2,7 @@
     <h1>S'inscrire</h1>
 <?php
     
-    /* page: inscription.php */
+
 //connexion à la base de données:
 $BDD = array();
 $BDD['host'] = "localhost";
