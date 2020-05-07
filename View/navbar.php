@@ -21,7 +21,7 @@
                 <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="profil.php">Profil</a></button>
                 <?php
            }
-           if($_SESSION["choix"] == "user"){
+           if($_SESSION["role"] == "user"){
                ?>
                 <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="profil.php">Profil</a></button>
                 <?php

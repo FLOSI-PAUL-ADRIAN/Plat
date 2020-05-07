@@ -144,19 +144,7 @@
         }
     }
     ?>
-<form action="Accueil.php" method="get">
-        <input type="submit" value="administrateur" name="choix">  <!-- la valeur correspond au role est le name renseigne la varible -->
-    </form>
-    <form action="Accueil.php" method="get">
-        <input type="submit" value="utilisateur" name="choix">
-    </form>
-    <form action="Accueil.php" method="get">
-        <input type="submit" value="visiteur" name="choix">
-    </form>
-    <br>
-    <?php 
-    echo "Votre role actuel est " . $_SESSION["role"] . ".";
-    ?>
+
 
 
 </body>
