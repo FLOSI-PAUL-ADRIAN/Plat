@@ -84,6 +84,9 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
     Mot de passe: <input type="password" name="mdp" value="" />
     <br />
     <input type="submit" name="connexion" value="Connexion" />
+    <?php 
+    session_start();
+    $_SESSION["role"]= "user";
 </form>
     </div>
 </body>

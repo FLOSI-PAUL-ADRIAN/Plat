@@ -14,28 +14,41 @@
     
     <?php
 
-       // session_start();
-        //if(isset($_GET["role"] == false){
-      //      $_SESSION['role'] ="visiteur";
-       //}
-        //if(isset($_GET["choix"]){
-          //  if($_GET["choix"] == "administrateur"){
-            //    $_SESSION["role"] = "administrateur";
-        //    }
-          //  if($_GET["choix"] == "user"){
-            //    $_SESSION["role"] = "user";
-           // }
-       // }
+       
+        if(isset($_SESSION["role"])){
+            if($_SESSION["role"] == false){
+            ?>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="login.php">Connectez vous !!!!</a></button>
+
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivez vous !!!</a></button>
+            <?php    
+            }           
+       
+     
+            if($_SESSION["role"] == "administrateur"){
+                ?>
+                <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="profil.php">Profil</a></button>
+                <?php
+           }
+           if($_SESSION["choix"] == "user"){
+               ?>
+                <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="profil.php">Profil</a></button>
+                <?php
+            }
+        }
+        else{
+            ?>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="login.php">Connectez vous !!!!</a></button>
+
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivez vous !!!</a></button>
+            <?php
+        }
  
         
        ?> 
-       -->
+       
 
-       <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="login.php">Connectez vous !!!!</a></button>
-
-<button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivez vous !!!</a></button>
-        
-
+      
      
 
         
