@@ -19,7 +19,7 @@
             $_SESSION["role"] ="visiteur";
             
         }
-        if(isset($_GET["choix"]){
+        if(isset($_GET["choix"]) { 
             if($_GET["choix"] == "administrateur"){
                 $_SESSION["role"] = "administrateur";
             }
