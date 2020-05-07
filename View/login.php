@@ -29,7 +29,7 @@ Page: connexion.php
 */
 session_start(); // à mettre tout en haut du fichier .php, cette fonction propre à PHP servira à maintenir la $_SESSION
 if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
-    // on vérifie que le champ "Pseudo" n'est pas vide
+    // on vérifie que le champ "Nom d'utilisateaur" n'est pas vide
     // empty vérifie à la fois si le champ est vide et si le champ existe belle et bien (is set)
     if(empty($_POST['pseudo'])) {
         echo "Le champ Pseudo est vide.";
@@ -84,6 +84,9 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
     Mot de passe: <input type="password" name="mdp" value="" />
     <br />
     <input type="submit" name="connexion" value="Connexion" />
+    <?php 
+    $_SESSION["role"]= "user";
+    ?>
 </form>
     </div>
 </body>
