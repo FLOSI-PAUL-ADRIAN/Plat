@@ -18,9 +18,9 @@
         if(isset($_SESSION["role"]) == "no one"){
             $_SESSION["role"] ="visiteur";
             ?>
-            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="connexion.php">Connecter vous !!!!</a></button>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="connexion.php">Connectez vous !!!!</a></button>
 
-            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivé vous !!!</a></button>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Inscrivez vous !!!</a></button>
         <?php
         }
         else{
