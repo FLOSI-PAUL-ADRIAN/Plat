@@ -40,7 +40,7 @@ function myFunction() {
 }
 </script>
 
-    <title>Theme</title>
+    <title>Themes</title>
 </head>
 <body style="background-color:rgba(255,133,79,80);" >
 <?php
@@ -51,12 +51,14 @@ function myFunction() {
 
         <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 
-<ul id="myMenu">
-<li><a href="#">Sciences</a></li>
-  <li><a href="#">Informatiques</a></li>
-  <li><a href="#">Littérature</a></li>
-  <li><a href="#">Histoire - Géographie</a></li>
-  <li><a href="#">Langues</a></li>
+<ul id="myMenu">  
+  <li><a href="./themes/Histoire-Geo/h-g.php">Histoire - Géographie</a></li>  
+  <li><a href="./themes/Info/info.php">Informatique</a></li>  
+    <li><a href="./themes/Langues/langues.php">Langues</a></li>
+    <li><a href="./themes/Litterature/litte.php">Littérature</a></li>
+<li><a href="./themes/Sciences/sciences.php">Sciences</a></li>
+
+
 </ul>
         </div>
         

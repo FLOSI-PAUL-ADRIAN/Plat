@@ -25,7 +25,7 @@
         }
         else{
             ?>
-            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="inscription.php">Profil</a></button>
+            <button class="btn btn-outline-light btn-sm my-0 pull-right"><a href="profil.php">Profil</a></button>
             <?php
         }
         ?>
