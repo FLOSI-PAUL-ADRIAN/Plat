@@ -95,3 +95,6 @@ input[type=submit]:hover {
             </form>
         </div>
 </body>
+<?php 
+session_start();
+?>
