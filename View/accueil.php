@@ -119,7 +119,7 @@
 
 </div>
 <!--/.Carousel Wrapper-->
-<h2 class="text-info "><a href="themes.php">Thèmes</h2>
+<a href="themes.php"><h2 class="text-info ">Thèmes</h2></a>
 <img src="./img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 <img src="./img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 <img src="./img/langues.jfif" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
