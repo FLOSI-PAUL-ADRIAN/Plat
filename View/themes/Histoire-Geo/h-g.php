@@ -18,7 +18,10 @@
             {
                 echo "Félicitation vous êtes sur la page administrateur.";
                 echo "Vous pouvez repartir vers la page d'acceuil si vous le désirez";
-                ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
+                ?> <br>        <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+              </form><?php
             }
             else
             {
@@ -26,7 +29,12 @@
             {
                 echo "Félicitation vous êtes sur la page utilisateur.";
                 echo "Vous pouvez repartir vers la page d'acceuil si vous le désirez";
-                ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
+                ?>         <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+              </form>
+              <?php
+                
             }
             else // sinon message d'erreur 
             {
