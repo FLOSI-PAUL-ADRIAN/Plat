@@ -19,18 +19,18 @@
             {
                 echo "Félicitation vous êtes sur la page administrateur.";
                 echo "Vous pouvez repartir vers la page d'acceuil si vous le désirez";
-                ?> <br><a href="Accueil.php"> Vers page d'acceuil </a><?php
+                ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
             }
             else
             {
             echo "Vous n'avez pas été accrédité";
-            ?> <br><a href="./Accueil.php"> Vers page d'acceuil </a><?php
+            ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
             }
         }
         else
         {
             echo "Merci de vous rendre sur la page d'accueil en premier lieu.";
-            ?> <br><a href="./Accueil.php"> Vers page d'acceuil </a><?php
+            ?> <br><a href="../../Accueil.php"> Vers page d'acceuil </a><?php
         }
     ?>
 </body>
