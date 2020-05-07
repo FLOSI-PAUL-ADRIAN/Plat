@@ -54,7 +54,7 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
                 echo "Erreur de connexion à la base de données.";
             } else {
                 // on fait maintenant la requête dans la base de données pour rechercher si ces données existe et correspondent:
-                $Requete = mysqli_query($mysqli,"SELECT * FROM membres WHERE pseudo = '".$Pseudo."' AND mdp = '".$MotDePasse."'");//si vous avez enregistré le mot de passe en md5() il vous suffira de faire la vérification en mettant mdp = '".md5($MotDePasse)."' au lieu de mdp = '".$MotDePasse."'
+                $Requete = mysqli_query($mysqli,"SELECT * FROM membres WHERE pseudo = '".$Pseudo."' AND mdp = '".md5($MotDePasse)."'");
                 // si il y a un résultat, mysqli_num_rows() nous donnera alors 1
                 // si mysqli_num_rows() retourne 0 c'est qu'il a trouvé aucun résultat
                 if(mysqli_num_rows($Requete) == 0) {
