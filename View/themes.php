@@ -16,7 +16,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 
 
     <script>
@@ -46,22 +50,94 @@ function myFunction() {
 <?php
           include("navbar.php");
         ?>
+<h1 class="text-info "><a href="matiere.php"></a>Matières</h1>
 
-        <div> 
+<!--Carousel Wrapper-->
+<div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i
+        class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
 
-<ul id="myMenu">  
-  <li><a href="./themes/Histoire-Geo/h-g.php">Histoire - Géographie</a></li>  
-  <li><a href="./themes/Info/info.php">Informatique</a></li>  
-    <li><a href="./themes/Langues/langues.php">Langues</a></li>
-    <li><a href="./themes/Litterature/litte.php">Littérature</a></li>
-<li><a href="./themes/Sciences/sciences.php">Sciences</a></li>
-<li><a href="matiere.php">Test </a></li>
 
 
-</ul>
-        </div>
+  <!--Slides and lightbox-->
+
+  <div class="carousel-inner lightbox" role="listbox">
+    <div id="mdb-lightbox-ui"></div>
+    <!--First slide-->
+    <div class=" carousel-item active text-center">
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/physique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/math.png" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/Chimie.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item text-center">
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/svt.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/informatique.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/Histoirgeo.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+
+
+    </div>
+    <!--/.Second slide-->
+
+    <!--Third slide-->
+    <div class="carousel-item text-center">
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/anglais.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/espagnol.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+      <figure class="col-md-0 d-md-inline-block">
+        <img src="./img/français.jpg" class="img-fluid" width ="500" height="300">
+      </figure>
+
+
+    </div>
+    <!--/.Third slide-->
+
+  </div>
+  <!--/.Slides-->
+
+<a href="matiere.php"><h2 class="text-info ">Thèmes</h2></a>
+<img src="./img/science.png" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="./img/litterature.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="./img/langues.jfif" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="./img/informatique.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+<img src="./img/Histoirgeo.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+
         
 
 </body>

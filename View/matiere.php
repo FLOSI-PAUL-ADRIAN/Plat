@@ -61,8 +61,6 @@ function myFunction() {
 </ul>
         </div>
 
-        <input type="file" />
-
 
         <br>
         <br>
