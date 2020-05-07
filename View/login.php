@@ -85,8 +85,8 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
     <br />
     <input type="submit" name="connexion" value="Connexion" />
     <?php 
-    session_start();
     $_SESSION["role"]= "user";
+    ?>
 </form>
     </div>
 </body>
