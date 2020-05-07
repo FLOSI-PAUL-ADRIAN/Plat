@@ -36,6 +36,4 @@
 </style>
 <body>
 
-<h1 class="text-info "><a href="matiere.php"></a>
-<?php 
-$reponse = $bdd->query('SELECT ')
+<h1 class="text-info "><a href="matiere.php"></a>Vous êtes sur votre Profil :)</h1>
