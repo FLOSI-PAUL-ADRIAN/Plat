@@ -36,4 +36,6 @@
 </style>
 <body>
 
-<h& class="text-info "><a href="matiere.php">
+<h1 class="text-info "><a href="matiere.php"></a>
+<?php 
+$reponse = $bdd->query('SELECT ')
