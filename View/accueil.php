@@ -126,5 +126,38 @@
 <img src="./img/langues.jfif" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 <img src="./img/informatique.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
 <img src="./img/Histoirgeo.jpg" alt="Logo HTML w3" style="width:400px; height:auto" class="float-left img-thumbnail">
+
+<?php
+   
+    if (isset($_SESSION["role"]) == false) { // vérification de si une session role est active 
+        $_SESSION["role"] = "visiteur";
+    }
+    if (isset($_POST["choix"])) {  // si mon choix (fait dans le form) alors mon role  
+        if ($_POST["choix"] == "administrateur") {
+            $_SESSION["role"] = "administrateur";
+        }
+        if ($_POST["choix"] == "utilisateur") {
+            $_SESSION["role"] = "utilisateur";
+        }
+        if ($_POST["choix"] == "visiteur") {
+            $_SESSION["role"] = "visiteur";
+        }
+    }
+    ?>
+<form action="Accueil.php" method="get">
+        <input type="submit" value="administrateur" name="choix">  <!-- la valeur correspond au role est le name renseigne la varible -->
+    </form>
+    <form action="Accueil.php" method="get">
+        <input type="submit" value="utilisateur" name="choix">
+    </form>
+    <form action="Accueil.php" method="get">
+        <input type="submit" value="visiteur" name="choix">
+    </form>
+    <br>
+    <?php 
+    echo "Votre role actuel est " . $_SESSION["role"] . ".";
+    ?>
+
+
 </body>
 </html>
